@@ -1,0 +1,396 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url('../img/background_clouds.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-between {
+  justify-content: space-between;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-rounded {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color .3s;
+  cursor: pointer;
+  border: 2px solid white;
+  text-align: center;
+  vertical-align: top;
+}
+.btn-rounded i {
+  height: 40px !important;
+  line-height: 40px !important;
+  width: 36px;
+}
+
+.dropdown-content {
+  top: 100% !important;
+}
+
+.dropdown-content.select-dropdown {
+  left: -15px !important;
+  width: auto !important;
+  white-space: nowrap;
+}
+
+.currency-select {
+  border-radius: 10px;
+  border: 2px solid white;
+  padding-left: 15px;
+}
+.select-wrapper input.select-dropdown {
+  height: 36px;
+}
+
+.select-wrapper .caret {
+  display: none;
+}
+
+/* Header styles */
+nav .brand-logo {
+  left: 0;
+  transform: none;
+}
+
+.header .brand-logo {
+  position: static;
+}
+
+.header .favourites {
+  margin-left: 20px;
+}
+
+.header .currency-select input.select-dropdown {
+  margin: 0;
+  color: #fff;
+  border-bottom: none;
+}
+
+.header .currency-select input.select-dropdown:focus {
+  border-bottom: none;
+}
+
+.header .currency-select {
+  width: 120px;
+}
+
+.header .currency-select .caret {
+  fill: #fff;
+}
+
+.header .brand-logo {
+  font-size: 1.5rem;
+}
+
+.form-section {
+  margin-top: 30px;
+}
+
+.form-section .card--form {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.input-field-group {
+  flex: 1 1 auto;
+}
+.input-field-button {
+  margin-left: 10px;
+}
+  .input-field-button .btn {
+    text-transform: none;
+    font-size: 1.4em;
+    font-weight: 600;
+    height: 60px;
+    padding: 0 40px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+.input-field {
+  flex: auto;
+}
+  .input-field input {
+    background-color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: inherit;
+    -webkit-appearance: none;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 60px;
+    line-height: 2.25rem;
+    padding: 9px 15px;
+    position: relative;
+    transition: border-radius .3s,width .3s;
+    box-shadow: 0 0 0 2px #00838f;
+    z-index: 1;
+    width: 100%;
+  }
+    .input-field input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #00838f;
+    }
+  .input-field input.autocomplete--origin {
+    border-radius: 5px 0 0 5px;
+  }
+  .input-field input.datepicker--return {
+    border-radius: 0 5px 5px 0;
+  }
+  .input-field input::placeholder {
+    color: #6d6d6d;
+  }
+
+.favourites {
+  height: 40px;
+  line-height: 40px;
+}
+.favourites .dropdown-content {
+  width: 400px !important;
+  height: auto !important;
+  max-height: 500px;
+  color: #000;
+}
+
+.favourite-item:hover {
+  background: #f2f8fb;
+}
+
+.favourites .favourite-empty-res-msg {
+  padding: 0 10px;
+}
+
+.favourites .favourite-item-airline-img {
+  max-width: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  border-radius: 50%;
+}
+
+.favourites .favourite-item-info {
+  flex-grow: 1;
+  padding: 10px;
+  line-height: 1;
+  height: auto;
+}
+
+.favourites .favourite-item-info .material-icons {
+  line-height: 1;
+  height: auto;
+}
+
+.favourites .favourite-item-destination {
+  border-bottom: 1px dashed gray;
+  margin-bottom: 5px;
+}
+
+.favourites .ticket-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.favourites .ticket-additional-info {
+  font-size: 12px;
+}
+
+.favourites .ticket-time-departure {
+  font-size: 14px;
+}
+
+.favourites .delete-favourite {
+  margin-top: 10px;
+}
+
+.ticket-card {
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+  .ticket-card .ticket-airline {
+    margin-bottom: 10px;
+  }
+
+  .ticket-card .ticket-price {
+    position: absolute;
+    right: 15px;
+    bottom: 8px;
+  }
+
+  .ticket-card .add-favourite {
+    position: absolute;
+    top: 0;
+    right: 13px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .ticket-card .ticket-additional-info {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+
+.ticket-airline-name {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.ticket-airline-img {
+  max-width: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.ticket-destination {
+  margin-bottom: 10px;
+  border-bottom: 1px dashed gray;
+}
+
+.ticket-destination .ticket-city {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.ticket-destination i.material-icons {
+  font-size: 26px;
+}
+
+.ticket-time-departure {
+  font-weight: bold;
+  color: gray;
+}
+
+.ticket-price {
+  font-size: 25px;
+  padding: 5px 0 5px 5px;
+  color: #0098b2;
+  font-weight: 600;
+}
+
+.ticket-additional-info {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tickets-empty-res-msg {
+  padding: 10px 15px;
+  text-align: center;
+  background: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.favourite-icon::after {
+  content: 'favorite_border';
+}
+.favourite-icon.favourite-true::after {
+  content: 'favorite';
+}
+
+@media only screen and (min-width: 601px) {
+  main > .container,
+  nav > .container {
+    width:100%
+  }
+}
+
+@media (max-width: 767.98px) {
+  .input-field-group {
+    flex-wrap: wrap;
+  }
+  .input-field {
+    min-width: 50%;
+  }
+  .input-field input.autocomplete--origin,
+  .input-field input.datepicker--depart {
+    border-radius: 5px 0 0 5px;
+  }
+  .input-field input.autocomplete--destination,
+  .input-field input.datepicker--return {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  .input-field-group {
+    display: block;
+    padding-bottom: 1rem;
+  }
+  .input-field {
+    min-width: 100%;
+    margin: 0;
+  }
+  .input-field input.autocomplete--origin {
+    border-radius: 5px 5px 0 0;
+  }
+  .input-field input.autocomplete--destination{
+    border-radius: 0;
+  }
+  .input-field input.datepicker--depart {
+    border-radius: 0;
+  }
+  .input-field input.datepicker--return {
+    border-radius: 0 0 5px 5px;
+  }
+  .favourites .dropdown-content {
+    width: 320px !important;
+  }
+}
+
+@media (max-width: 992.98px) {
+  .card-content {
+    display: block;
+  }
+  .input-field-button {
+    text-align: center;
+    margin: auto;
+  }
+}
