@@ -3,14 +3,13 @@ const autoprefixer = require('autoprefixer');
 const precss = require('precss');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  // Итак,  чтобы вебпак начал свою работу, нужно указать главный (основной) файл, который будет включать в себя все другие необходимые файлы (модули).
   entry: {
     polyfill: 'babel-polyfill',
     app: './js/app.js',
   },
-  // Также webpack рекомендует явно указывать, в какой директории находятся исходные файлы проекта (ресурсы). Для этого следует использовать свойство context:
   context: path.resolve(__dirname, 'src'),
   devServer: {
     publicPath: '/',
@@ -75,6 +74,7 @@ module.exports = {
   //Например, плагин для минификации кода (во время сборки код подвергается очистке и минификации).
   //Или плагин для сборки html страницы и css кода (скрипты вставляются в html, куски css собираются в один файл).
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: './style.css' }),
     new HtmlWebpackPlugin({
       template: 'index.html',

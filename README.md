@@ -10,6 +10,11 @@ npm install
 ```
 npm run dev
 ```
+
+### Compiles and minifies for production
+```
+npm run build
+```
 ---
 
 ### What the project looks like
